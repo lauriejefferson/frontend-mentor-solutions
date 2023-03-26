@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --clr-primary-red: hsl(0, 100%, 74%);
+    --clr-primary-green: hsl(154, 59%, 51%);
+    --clr-primary-green-shadow: hsl(154, 54%, 45%);
+    --clr-primary-blue: hsl(246, 73%, 53%);
+    --clr-accent-blue: hsl(248, 32%, 49%);
+
+    --clr-neutral-darkblue: hsl(249, 10%, 26%);
+    --clr-neutral-grayblue: hsl(246, 25%, 77%);
+
+    --clr-input: hsl(0, 1%, 83%);
+
+    --ff-base: 'Poppins', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html,
+body {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+body {
+    font-family: var(--ff-base);
+    padding: 1.5em;
+    text-align: center;
+    background-color: var(--clr-primary-red);
+    background-image: url("./images/bg-intro-desktop.png");
+    color: white;
+}
+
+.left h1 {
+    margin: 1.3em 0;
+    font-size: 2rem;
+}
+
+.left p {
+    margin-bottom: 3em;
+    line-height: 1.6;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right .signup {
+    background-color: var(--clr-accent-blue);
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    padding: 1.5em 2em;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(108, 105, 106, 0.3) 0px 8px;
+}
+
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control input {
+    padding: 1em 0.25em;
+    border: 1px solid var(--clr-input);
+    border-radius: 7px;
+    margin: 0.5em 0;
+    text-indent: 10px;
+}
+
+.form-control input:focus {
+    border: 2px solid var(--clr-accent-blue);
+    outline: none;
+}
+
+.form-control input::placeholder {
+    color: var(--clr-neutral-darkblue);
+    font-weight: var(--fw-semi-bold);
+    opacity: 0.75;
+    padding-left: 20px;
+    font-size: 0.85rem;
+}
+
+.form-control small {
+    display: none;
+}
+
+
+.form-control.error input {
+    border: 2px solid var(--clr-primary-red);
+    background-image: url("./images/icon-error.svg");
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.form-control.error small {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--clr-primary-red);
+    font-style: italic;
+    font-weight: var(--fw-medium);
+    padding-bottom: 1em;
+}
+
+.form-control.success small {
+    display: none;
+}
+
+.btn {
+    background-color: var(--clr-primary-green);
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid var(--clr-primary-green);
+    margin-top: 0.5em;
+    padding: 0.75em;
+    font-weight: var(--fw-semi-bold);
+    border-radius: 7px;
+    box-shadow: var(--clr-primary-green-shadow) 0px 4px;
+    cursor: pointer;
+}
+
+.right .terms-of-service {
+    margin-top: 1em;
+    color: var(--clr-neutral-grayblue);
+    font-size: 0.55rem;
+}
+
+.right .terms-of-service a {
+    color: var(--clr-primary-red);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+@media (max-width: 375px){
+    body {
+        background-image: url('./images/bg-intro-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+}
+
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+        align-items: center;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right form {
+        padding: 1em 2.5em;
+    }
+
+}
