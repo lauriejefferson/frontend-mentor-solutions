@@ -1,13 +1,9 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 }
 
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px
+.main {
+  margin: 0 auto;
 }

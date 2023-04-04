@@ -5,14 +5,13 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './style.css'
 
 const Card = ({item}) => {
-  console.log(item);
   return (
-    <div>
+    <div className='container'>
     {item.map((val) => {
         return (
           <div key={val.id} className='card'>
             <div>
-              <img src={val.img} alt={val.title} className="card__img"/>
+              <img src={val.img} alt={val.title} className='card__img' />
             </div>
             <div>
               {' '}
@@ -20,15 +19,53 @@ const Card = ({item}) => {
             </div>
             <div className='card__body'>
               <div>
-                {val.tech.map((t) => {
+                {val.tech.map((t, index) => {
                   return (
-                    <div key={t} className='card__tech'>
-                      {t}
+                    <div key={index} className='card__tech'>
+                      <p
+                        className={
+                          t === 'HTML'
+                            ? 'card__tech--HTML'
+                            : t === 'CSS'
+                            ? 'card__tech--CSS'
+                            : t === 'JS'
+                            ? 'card__tech--JS'
+                            : ''
+                        }
+                      >
+                        {t}
+                      </p>
                     </div>
                   );
                 })}
               </div>
-              <div>{val.category}</div>
+              <div className='card__category'>
+                <span className={
+                  val.id === '1' ? 'card__category--1' :
+                  val.id === '2' ? 'card__category--2' :
+                  val.id === '3' ? 'card__category--3' :
+                  val.id === '4' ? 'card__category--4' :
+                  val.id === '5' ? 'card__category--5' :
+                  ''
+                  }>{val.id}</span>
+                <span
+                  className={
+                    val.category === 'NEWBIE'
+                      ? 'card__category--NEWBIE'
+                      : val.category === 'JUNIOR'
+                      ? 'card__category--JUNIOR'
+                      : val.category === 'INTERMEDIATE'
+                      ? 'card__category--INTERMEDIATE'
+                      : val.category === 'ADVANCED'
+                      ? 'card__category--ADVANCED'
+                      : val.category === 'GURU'
+                      ? 'card__category--GURU'
+                      : ''
+                  }
+                >
+                  {val.category}
+                </span>
+              </div>
             </div>
             <div className='card__footer'>
               <div>

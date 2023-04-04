@@ -19,9 +19,9 @@ function App() {
      <h1>Frontend Mentor Solutions</h1>
      <div>
       <Chips filterItem={filterItem} setItem={setItem} menuItems={menuItems} />
-      <div className="container">
+      <main className="main">
        <Card item={item} /> 
-      </div>
+      </main>
      </div>
     </div>
   )

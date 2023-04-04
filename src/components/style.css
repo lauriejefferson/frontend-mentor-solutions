@@ -1,3 +1,10 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px
+}
+
 .card {
     padding: 2em;
     border: 2px solid #555151;
@@ -14,12 +21,51 @@
 .card__body {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5em;
+    margin: 1.5em 0;
 }
 
 .card__tech {
     display: inline-block;
     padding-right: 0.3em;
+}
+
+.card__tech--HTML {
+    color: #6abecd;
+    font-weight: 700;
+}
+
+.card__tech--CSS {
+    color: #3e54a3;
+    font-weight: 700;
+}
+
+.card__tech--JS {
+    color: #cf6390;
+    font-weight: 700;
+}
+
+.card__category {
+    display: flex;
+}
+
+.card__category--NEWBIE {
+    padding: 0 0.75em;
+    background-color: #fff;
+    color: #6abecd;
+    border: 2px solid #6abecd;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card__category--1 {
+    padding: 0 0.75em;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    margin: 0;
+    background-color: #6abecd;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .card__footer {
@@ -29,15 +75,110 @@
 
 .chips {
     border: none;
-    background-color: #fee4c3;
-    color: #303538;
-    border-radius: 20px;
-    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
     line-height: 24px;
     font-weight: 700;
     margin-right: 2em;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .chips:hover {
     background-color: #fcc875;
+}
+
+.chips__group {
+    display: flex;
+}
+
+.chips__NEWBIE {
+    background-color: #fff;
+    color: #6abecd;
+    border: 3px solid #6abecd;
+    border-radius: 5px;
+    padding: 5px 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.chips__NEWBIE:active {
+    background-color: #6abecd;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.chips__JUNIOR {
+    background-color: #fff;
+    color: #aad742;
+    border: 3px solid #aad742;
+    border-radius: 5px;
+    padding: 5px 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.chips__JUNIOR:active {
+    background-color: #aad742;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.chips__INTERMEDIATE {
+    background-color: #fff;
+    color: #f1b604;
+    border: 3px solid #f1b604;
+    border-radius: 5px;
+    padding: 5px 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.chips__INTERMEDIATE:active {
+    background-color: #f1b604;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.chips__ADVANCED {
+    background-color: #fff;
+    color: #f48925;
+    border: 3px solid #f48925;
+    border-radius: 5px;
+    padding: 5px 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.chips__ADVANCED:active {
+    background-color: #f48925;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.chips__GURU {
+    background-color: #fff;
+    color: #ed2c49;
+    border: 3px solid #ed2c49;
+    border-radius: 5px;
+    padding: 5px 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.chips__GURU:active {
+    background-color: #ed2c49;
+    border: 3px solid #fff;
+    color: #fff;
 }
