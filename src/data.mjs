@@ -10,8 +10,7 @@ const data = [
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
       'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
-    preview_link:
-      'https://lauriejefferson.github.com/frontend-mentor-solutions/intro-component-with-signup-form-master',
+    preview_link: 'https://intro-component-signup-lj.netlify.app/',
   },
   {
     id: '2',
