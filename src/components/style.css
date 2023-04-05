@@ -6,7 +6,7 @@
 }
 
 .card {
-    padding: 2em;
+    /* padding: 1.2em; */
     border: 2px solid #555151;
     margin: 1em 0.25em;
     border-radius: 10px;
@@ -16,16 +16,24 @@
 .card__img {
     width: 450px;
     height: 300px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.card__title {
+    padding: 1.2em;
 }
 
 .card__body {
     display: flex;
     justify-content: space-between;
-    margin: 1.5em 0;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    padding: 0 1.2em;
 }
 
 .card__tech {
-    display: inline-block;
+    display: inline-flex;
     padding-right: 0.3em;
 }
 
@@ -46,6 +54,7 @@
 
 .card__category {
     display: flex;
+    margin-bottom: 1.2em;
 }
 
 .card__category--NEWBIE {
@@ -53,6 +62,38 @@
     background-color: #fff;
     color: #6abecd;
     border: 2px solid #6abecd;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.card__category--JUNIOR{
+    padding: 0 0.75em;
+    background-color: #fff;
+    color: #aad742;
+    border: 2px solid #aad742;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.card__category--INTERMEDIATE{
+    padding: 0 0.75em;
+    background-color: #fff;
+    color: #f1b604;
+    border: 2px solid #f1b604;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.card__category--ADVANCED{
+    padding: 0 0.75em;
+    background-color: #fff;
+    color: #f48925;
+    border: 2px solid #f48925;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.card__category--GURU{
+    padding: 0 0.75em;
+    background-color: #fff;
+    color: #ed2c49;
+    border: 2px solid #ed2c49;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -67,10 +108,51 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+.card__category--2 {
+    padding: 0 0.75em;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    margin: 0;
+    background-color: #aad742;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.card__category--3 {
+    padding: 0 0.75em;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    margin: 0;
+    background-color: #f1b604;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.card__category--4 {
+    padding: 0 0.75em;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    margin: 0;
+    background-color: #f48925;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.card__category--5 {
+    padding: 0 0.75em;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    margin: 0;
+    background-color: #ed2c49;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 
 .card__footer {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 1.2em;
 }
 
 .chips {

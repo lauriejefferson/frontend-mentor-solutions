@@ -17,7 +17,7 @@ const data = [
     id: '2',
     category_id: '2',
     category: 'JUNIOR',
-    img: IntroComponentSignup,
+    img: 'https://fakeimg.pl/300/',
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
       'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
@@ -28,7 +28,7 @@ const data = [
     id: '3',
     category_id: '3',
     category: 'INTERMEDIATE',
-    img: IntroComponentSignup,
+    img: 'https://fakeimg.pl/300/',
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
       'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
@@ -39,7 +39,7 @@ const data = [
     id: '4',
     category_id: '4',
     category: 'ADVANCED',
-    img: IntroComponentSignup,
+    img: 'https://fakeimg.pl/300/',
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
       'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
@@ -50,7 +50,7 @@ const data = [
     id: '5',
     category_id: '5',
     category: 'GURU',
-    img: IntroComponentSignup,
+    img: 'https://fakeimg.pl/300/',
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
       'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',

@@ -13,7 +13,7 @@ const Card = ({item}) => {
             <div>
               <img src={val.img} alt={val.title} className='card__img' />
             </div>
-            <div>
+            <div className='card__title'>
               {' '}
               <h3>{val.title}</h3>
             </div>
@@ -40,14 +40,23 @@ const Card = ({item}) => {
                 })}
               </div>
               <div className='card__category'>
-                <span className={
-                  val.id === '1' ? 'card__category--1' :
-                  val.id === '2' ? 'card__category--2' :
-                  val.id === '3' ? 'card__category--3' :
-                  val.id === '4' ? 'card__category--4' :
-                  val.id === '5' ? 'card__category--5' :
-                  ''
-                  }>{val.id}</span>
+                <span
+                  className={
+                    val.id === '1'
+                      ? 'card__category--1'
+                      : val.id === '2'
+                      ? 'card__category--2'
+                      : val.id === '3'
+                      ? 'card__category--3'
+                      : val.id === '4'
+                      ? 'card__category--4'
+                      : val.id === '5'
+                      ? 'card__category--5'
+                      : ''
+                  }
+                >
+                  {val.id}
+                </span>
                 <span
                   className={
                     val.category === 'NEWBIE'
