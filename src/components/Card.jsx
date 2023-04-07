@@ -42,15 +42,15 @@ const Card = ({item}) => {
               <div className='card__category'>
                 <span
                   className={
-                    val.id === '1'
+                    val.category_id === '1'
                       ? 'card__category--1'
                       : val.category_id === '2'
                       ? 'card__category--2'
-                      : val.id === '3'
+                      : val.catetory_id === '3'
                       ? 'card__category--3'
-                      : val.id === '4'
+                      : val.category_id === '4'
                       ? 'card__category--4'
-                      : val.id === '5'
+                      : val.category_id === '5'
                       ? 'card__category--5'
                       : ''
                   }
