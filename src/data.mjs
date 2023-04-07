@@ -1,4 +1,5 @@
 import IntroComponentSignup from "./images/intro-component-signup.png"
+import InteractiveRatingComponent from "./images/interactive-rating-component.png"
 
 const data = [
   {
@@ -14,14 +15,13 @@ const data = [
   },
   {
     id: '2',
-    category_id: '2',
-    category: 'JUNIOR',
-    img: 'https://fakeimg.pl/300/',
+    category_id: '1',
+    category: 'NEWBIE',
+    img: InteractiveRatingComponent,
     tech: ['HTML', 'CSS', 'JS'],
     github_link:
-      'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
-    preview_link:
-      'https://lauriejefferson.github.com/frontend-mentor-solutions/intro-component-with-signup-form-master',
+      'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/interactive-rating-component-main',
+    preview_link: 'https://interactive-rating-component-lj.netlify.app/',
   },
   {
     id: '3',
