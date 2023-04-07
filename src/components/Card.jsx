@@ -44,7 +44,7 @@ const Card = ({item}) => {
                   className={
                     val.id === '1'
                       ? 'card__category--1'
-                      : val.id === '2'
+                      : val.category_id === '2'
                       ? 'card__category--2'
                       : val.id === '3'
                       ? 'card__category--3'
