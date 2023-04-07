@@ -46,7 +46,7 @@ const Card = ({item}) => {
                       ? 'card__category--1'
                       : val.category_id === '2'
                       ? 'card__category--2'
-                      : val.catetory_id === '3'
+                      : val.category_id === '3'
                       ? 'card__category--3'
                       : val.category_id === '4'
                       ? 'card__category--4'
