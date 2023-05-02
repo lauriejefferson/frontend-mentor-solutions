@@ -1,5 +1,6 @@
-import IntroComponentSignup from "./images/intro-component-signup.png"
-import InteractiveRatingComponent from "./images/interactive-rating-component.png"
+import IntroComponentSignup from './images/intro-component-signup.png';
+import InteractiveRatingComponent from './images/interactive-rating-component.png';
+import ResultsSummaryComponent from './images/results-summary-component.png';
 
 const data = [
   {
@@ -26,14 +27,13 @@ const data = [
   },
   {
     id: '3',
-    category_id: '2',
-    category: 'JUNIOR',
-    img: 'https://fakeimg.pl/300/',
-    tech: ['HTML', 'CSS', 'JS'],
+    category_id: '1',
+    category: 'NEWBIE',
+    img: ResultsSummaryComponent,
+    tech: ['HTML', 'CSS'],
     github_link:
-      'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/intro-component-with-signup-form-master',
-    preview_link:
-      'https://lauriejefferson.github.com/frontend-mentor-solutions/intro-component-with-signup-form-master',
+      'https://github.com/lauriejefferson/frontend-mentor-solutions/tree/main/results-summary-component-main',
+    preview_link: 'https://results-summary-component-lj.netlify.app',
   },
   {
     id: '4',
