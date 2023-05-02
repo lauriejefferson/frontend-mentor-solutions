@@ -17,7 +17,7 @@ const data = [
   {
     id: '2',
     category_id: '1',
-    title: 'Interactive Rating Componet',
+    title: 'Interactive Rating Component',
     category: 'NEWBIE',
     img: InteractiveRatingComponent,
     tech: ['HTML', 'CSS', 'JS'],
@@ -28,6 +28,7 @@ const data = [
   {
     id: '3',
     category_id: '1',
+    title: 'Results Summary Component',
     category: 'NEWBIE',
     img: ResultsSummaryComponent,
     tech: ['HTML', 'CSS'],
