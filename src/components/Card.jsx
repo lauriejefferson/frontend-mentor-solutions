@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import './style.css'
+import './style.css';
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
   return (
     <div className='container'>
-    {item.map((val) => {
+      {item.map((val) => {
         return (
           <div key={val.id} className='card'>
             <div>
@@ -55,7 +55,7 @@ const Card = ({item}) => {
                       : ''
                   }
                 >
-                  {val.id}
+                  {val.category_id}
                 </span>
                 <span
                   className={
@@ -98,9 +98,9 @@ const Card = ({item}) => {
             </div>
           </div>
         );
-    })}
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
