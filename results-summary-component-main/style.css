@@ -29,16 +29,20 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1440px;
     font-family: var(--ff-body);
     margin: 0 auto;
+    font-size: var(--ff-body);
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .score {
@@ -51,12 +55,13 @@ body {
     padding: 0 2em;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+
 }
 
 .score h3 {
     color: var(--clr-neutral-lightlavender);
     font-weight: var(--fw-500);
-    margin: 0 0 2em;
+    margin: 0 0 1em;
 }
 
 .score__circle {
@@ -66,7 +71,7 @@ body {
     width: 150px;
     height: 150px;
     background: linear-gradient(var(--clr-grad-violetblue), var(--clr-grad-light-royalblue));
-    margin-bottom: 1.8em;
+    margin-bottom: 1.5em;
 }
 
 .score__innercircle {
@@ -111,13 +116,14 @@ body {
     margin: 0 2em;
 }
 
-.summary h4 {
+.summary h2 {
     color: var(--clr-neutral-darkgrayblue);
-    font-size: 1.125rem;
-    margin-top: 0.5em;
+    /* font-size: 1.125rem; */
+    margin-top: 1.125em;
 }
 
 .summary ul {
+    margin: 0;
     padding: 0;
 }
 
@@ -127,7 +133,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
-    margin-bottom: 1em;
+    margin: 0 0 1em;
+
 }
 
 .summary__type {
@@ -191,4 +198,25 @@ button {
     font-size: 1.125rem;
     border: none;
     border-radius: 30px;
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10em auto;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 350px);
+        gap: 1em;
+        margin: 2em 5em;
+    }
+
+    .score {
+        border-radius: 25px;
+    }
 }
