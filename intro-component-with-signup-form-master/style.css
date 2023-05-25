@@ -35,10 +35,9 @@
 
 html,
 body {
-    height: 100%;
+    height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
-
 }
 
 body {
@@ -75,21 +74,26 @@ h6 {
 h1,
 h2,
 h3 {
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 body {
     font-family: var(--ff-base);
-    padding: 1.5em;
     text-align: center;
     background-color: var(--clr-primary-red);
     background-image: url("./images/bg-intro-desktop.png");
     color: white;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 .left h1 {
-    margin: 1.3em 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin: 1em 0 1em 0;
 }
 
 .left p {
@@ -100,14 +104,19 @@ body {
 .right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    width: 100%;
 }
 
 .right .signup {
     background-color: var(--clr-accent-blue);
     text-align: center;
     display: inline-block;
+    width: 90%;
     margin-bottom: 1.5em;
-    padding: 1.5em 2em;
+    padding: 1.5em 2.5em;
     text-decoration: none;
     color: white;
     border-radius: 10px;
@@ -119,21 +128,22 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 1em 1.5em;
+    padding: 2em 2.5em;
     border-radius: 10px;
+    width: 90%;
 }
 
 .form-control {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0.75em;
 }
 
 .form-control input {
-    padding: 1em 0.25em;
+    padding: 1em 1.5em;
     border: 1px solid var(--clr-input);
     border-radius: 7px;
     margin: 0.5em 0;
-    text-indent: 10px;
 }
 
 .form-control input:focus {
@@ -145,8 +155,8 @@ body {
     color: var(--clr-neutral-darkblue);
     font-weight: var(--fw-semi-bold);
     opacity: 0.75;
-    padding-left: 20px;
-    font-size: 0.85rem;
+    padding-left: 10px;
+    font-size: 1rem;
 }
 
 .form-control small {
@@ -200,29 +210,38 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 375px){
+@media (max-width: 768px) {
     body {
         background-image: url('./images/bg-intro-mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
-    } 
+    }
 }
 
-
 @media (min-width: 1000px) {
-    body {
+    .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5em;
+        gap: 2em;
+        justify-items: center;
         align-items: center;
+        width: 100%;
+        margin-top: 5em;
     }
 
     .left {
+        margin-top: 2.5em;
         text-align: left;
+        width: 100%;
     }
 
-    .right form {
-        padding: 1em 2.5em;
+    .left h1 {
+        margin: 1em 0 0.5em 0;
+        font-size: 3.2rem;
+    }
+
+    .right {
+        width: 100%;
     }
 
 }
