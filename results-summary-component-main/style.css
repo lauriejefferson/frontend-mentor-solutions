@@ -127,7 +127,7 @@ body {
 
 .score-message {
     color: var(--clr-neutral-100);
-    font-size: var(--fs-700);
+    font-size: 1.75rem;
     font-weight: var(--fw-bold);
 }
 

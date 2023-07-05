@@ -62,6 +62,7 @@ I use CSS Flexbox and CSS Grid in my projects regularly, so for future projects 
 ### Useful resources
 
 - [A Guide to CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties) - This website helped with using CSS Flexbox properties.
+- [From Design To Code/HTML & CSS From Scratch/Frontend Mentor](https://www.youtube.com/watch?v=KqFAs5d3Yl8)
 
 
 ## Author
