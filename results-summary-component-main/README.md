@@ -50,7 +50,10 @@ Users should be able to:
 
 ### What I learned
 
-I used CSS Grid to change the layout from vertical for mobile screens to horizontal for desktop screens. I also used CSS Flexbox to center containers on the screen and to align the content in a column direction.
+I used CSS Grid to change the layout from vertical for mobile screens to horizontal for desktop screens. I also used CSS Flexbox to center containers on the screen and to align the content in a column direction. 
+
+## Update 
+I updated my design by following Kevin Powell's video here [From Design To Code](https://www.youtube.com/watch?v=KqFAs5d3Yl8).  I modified my CSS variables to make it easier to use gradients and the varying shades of the gradients in the main score and in the summary items.  I also added a couple of media queries so that the layout would automatically stack  at screen sizes under 600px and use CSS grid above 600px.
 
 ### Continued development
 
