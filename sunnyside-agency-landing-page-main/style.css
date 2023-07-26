@@ -468,6 +468,7 @@ header {
 
 .footer--links {
   padding: 2em 1.5em;
+  text-align: center;
 }
 
 .footer--links a {
@@ -490,8 +491,16 @@ header {
 .attribution {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-primary-800);
   padding: 1em 0;
+  letter-spacing: 2px;
+}
+
+.attribution>a {
+  font-size: 1rem;
+  color: var(--clr-primary-600);
 }
 
 @media (min-width: 600px) {
