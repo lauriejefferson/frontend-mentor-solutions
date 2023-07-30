@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="./images/logo.svg" alt="logo" />
+      </a>
+      <button class="nav-toggle" aria-label="open navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav-list nav-list--primary">
+          <li class="nav-list-item">
+            <a href="#" class="nav-link nav-link--toggle">Features</a>
+            <span>
+              <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
+            </span>
+            <ul class="nav-list-nested nav-nested--toggle">
+              <li class="nav-list-nested-item">
+                <span>
+                  <img src="./images/icon-todo.svg" alt="todo" />
+                </span>
+                <h5 class="nav-list-item--title">Todo List</h5>
+              </li>
+              <li class="nav-list-nested-item">
+                <span>
+                  <img src="./images/icon-calendar.svg" alt="calendar" />
+                </span>
+                <h5 class="nav-list-item--title">Calendar</h5>
+              </li>
+              <li class="nav-list-nested-item">
+                <span>
+                  <img src="./images/icon-reminders.svg" alt="reminders" />
+                </span>
+                <h5 class="nav-list-item--title">Reminders</h5>
+              </li>
+              <li class="nav-list-nested-item">
+                <span>
+                  <img src="./images/icon-planning.svg" alt="planning" />
+                </span>
+                <h5 class="nav-list-item--title">Planning</h5>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link">Company</a>
+            <ul class="nav-list-nested nav-nested--toggle">
+              <li class="nav-list-nested-item">
+                <h5 class="nav-list-item--title">History</h5>
+              </li>
+              <li class="nav-list-nested-item">
+                <h5 class="nav-list-item--title">Our Team</h5>
+              </li>
+              <li class="nav-list-nested-item">
+                <h5 class="nav-list-item--title">Blog</h5>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="nav-link">Careers</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+        </ul>
+        <ul class="nav-list nav-list--secondary">
+          <li class="nav-list-item">
+            <a href="#" class="nav-link">Login</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="nav-link">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-image">
+        <img src="./images/image-hero-desktop.png" alt="image-hero-desktop" />
+      </div>
+      <div class="hero-main">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+      </div>
+      <a href="#" class="hero-link"> Learn more</a>
+      <div class="hero-icons">
+        <div class="databiz">
+          <img src="./images/client-databiz.svg" alt="databiz" />
+        </div>
+        <div class="audiophile">
+          <img src="./images/client-audiophile.svg" alt="audiophile" />
+        </div>
+        <div class="meet">
+          <img src="./images/client-meet.svg" alt="meet" />
+        </div>
+        <div class="maker">
+          <img src="./images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
