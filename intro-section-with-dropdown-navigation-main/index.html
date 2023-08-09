@@ -28,12 +28,19 @@
           <img src="./images/logo.svg" alt="logo" />
         </a>
         <nav class="nav">
-          <ul class="nav-list nav-list--primary">
+           <button class="nav-toggle nav-toggle-close" aria-label="open navigation">
+            <span class="hamburger">
+              <img src="./images/icon-close-menu.svg" alt="" />
+            </span>
+          </button>
+          <ul class="nav-list">
             <li class="nav-list-item">
-              <a href="#" class="nav-link nav-link--toggle">Features</a>
-              <span>
-                <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
-              </span>
+              <div class="nav-list-item--primary">
+                <a href="#" class="nav-link nav-link--toggle">Features</a>
+                <span>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
+                </span> 
+              </div>
               <ul class="nav-list-nested nav-nested--toggle">
                 <li class="nav-list-nested-item">
                   <span>
@@ -62,7 +69,12 @@
               </ul>
             </li>
             <li class="nav-list-item">
-              <a href="" class="nav-link">Company</a>
+              <div class="nav-list-item--secondary">
+                <a href="" class="nav-link">Company</a>
+                <span>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
+                </span> 
+              </div>
               <ul class="nav-list-nested nav-nested--toggle">
                 <li class="nav-list-nested-item">
                   <h5 class="nav-list-item--title">History</h5>
@@ -81,8 +93,6 @@
             <li class="nav-list-item">
               <a href="#" class="nav-link">About</a>
             </li>
-          </ul>
-          <ul class="nav-list nav-list--secondary">
             <li class="nav-list-item">
               <a href="#" class="nav-link">Login</a>
             </li>
@@ -90,7 +100,7 @@
               <a href="#" class="nav-link">Register</a>
             </li>
           </ul>
-        </nav>
+
       </div>
     </header>
     <section class="hero">
