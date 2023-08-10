@@ -178,37 +178,55 @@ section {
 }
 
 .nav-link {
-  padding: 0.5em 0;
+  padding-right: 0.8em;
   text-decoration: none;
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-400);
 }
 
 .nav-list {
-  margin: 1em 0.8em;
+  margin: 3em 1em 0.2em 1.8em;
 }
 
 .nav-list-item {
   padding: 1em 0;
 }
 
+
 .nav-list-item--title {
+  color: var(--clr-primary-800);
   font-weight: var(--fw-400);
 }
 
 .nav-list-nested {
-  margin: 0.5em 0.25em;
+  margin: 0.5em 1.8em;
 }
 
 .nav-list-nested-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5em 0.2em;
+  justify-content: flex-start;
+  align-items: left;
+  margin: 1em 0.2em 0.5em 0.2em;
+  padding: 0.3em 0;
+  font-size: 1.2rem;
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-400);
 }
 
 .nav-list-nested-item span {
   margin-right: 1em;
 }
 
+.nav-list-nested-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-link--register {
+  border: 1px solid var(--clr-primary-900);
+  border-radius: 10px;
+  padding: 0.8em 4em;
+}
 
 .hero-title {
   margin: 1em 0.8em 0;
@@ -256,20 +274,36 @@ section {
     height: 100%;
     z-index: 1;
     top: 0;
-    left: 20%;
+    left: 30%;
     width: 80%;
     background-color: white;
   }
 
-  .nav-list-item--primary {
+  .nav-toggle-close {
+    left: 65%;
+  }
+
+  .nav-list-item--features {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
-  .nav-list-item--secondary {
+  .nav-list-item--company {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-link--careers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-link--about {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
   }
 }
