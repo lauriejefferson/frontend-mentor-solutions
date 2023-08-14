@@ -154,7 +154,6 @@ section {
 
 }
 
-
 .nav .nav-toggle {
   margin-top: 0.5em;
 }
@@ -163,14 +162,7 @@ section {
   background-color: white;
 }
 
-.nav {
-  visibility: hidden;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0;
-}
+
 
 .nav--visible {
   visibility: visible;
@@ -267,7 +259,7 @@ section {
   text-decoration: none;
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
   .nav {
     position: fixed;
     font-size: 1rem;
@@ -277,6 +269,14 @@ section {
     left: 30%;
     width: 80%;
     background-color: white;
+  }
+
+  .nav {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
   }
 
   .nav-toggle-close {
@@ -305,5 +305,60 @@ section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: auto;
+    background-color: var(--clr-primary-100);
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav-list-item {
+    margin: 0 1.5em;
+    padding: 0;
+  }
+
+  .nav-link {
+    margin: 0;
+  }
+
+  .nav-list-item--features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-list-item--company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .hero-image img {
+    content: url("./images/image-hero-desktop.png");
+    width: 100%;
   }
 }
