@@ -375,16 +375,25 @@ section {
     align-items: center;
   }
 
+  .arrow-up--one {
+    content: url('./images/icon-arrow-down.svg');
+  }
+
   .nav-list-item--company {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  .arrow-up--two {
+    content: url('./images/icon-arrow-down.svg');
+  }
+
   .nav-list-nested {
     background: white;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1.5em;
+    border-radius: 15px;
   }
 
   .nav-list-nested-item {
