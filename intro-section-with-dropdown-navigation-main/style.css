@@ -195,6 +195,17 @@ section {
   position: relative;
 }
 
+.nav--visible-company {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav--visible-features {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
 
 .nav-link {
   padding-right: 0.8em;
@@ -333,7 +344,7 @@ section {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .nav-toggle {
     display: none;
   }

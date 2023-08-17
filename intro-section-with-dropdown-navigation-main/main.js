@@ -17,11 +17,11 @@ navToggleClose.addEventListener('click', (e) => {
 });
 
 features.addEventListener('click', (e) => {
-  featuresList.classList.toggle('nav--visible');
+  featuresList.classList.toggle('nav--visible-features');
   arrowUpOne.classList.toggle('rotate');
 });
 
 company.addEventListener('click', (e) => {
-  companyList.classList.toggle('nav--visible');
+  companyList.classList.toggle('nav--visible-company');
   arrowUpTwo.classList.toggle('rotate');
 });
