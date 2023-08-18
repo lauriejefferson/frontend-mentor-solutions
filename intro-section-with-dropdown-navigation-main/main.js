@@ -14,6 +14,12 @@ navToggle.addEventListener('click', () => {
 
 navToggleClose.addEventListener('click', (e) => {
   nav.classList.toggle('nav--visible');
+  if (featuresList.classList.contains('nav--visible-features')) {
+    featuresList.classList.remove('nav--visible-features');
+  }
+  if (companyList.classList.contains('nav--visible-company')) {
+    companyList.classList.remove('nav--visible-company');
+  }
 });
 
 features.addEventListener('click', (e) => {

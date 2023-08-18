@@ -151,20 +151,8 @@ section {
   left: 0;
   width: 100%;
   background-color: white;
-
 }
 
-.rotate {
-  transform: rotate(180deg);
-}
-
-.nav .nav-toggle {
-  margin-top: 0.5em;
-}
-
-.nav-toggle-close {
-  background-color: white;
-}
 
 .nav-nested--features {
   visibility: hidden;
@@ -188,6 +176,21 @@ section {
   width: 100%;
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
+.nav .nav-toggle {
+  margin-top: 0.5em;
+}
+
+.nav-toggle-close {
+  background-color: white;
+}
+
+.nav-toggle--close {
+  display: block;
+}
 
 .nav--visible {
   visibility: visible;
@@ -200,6 +203,7 @@ section {
   height: auto;
   position: relative;
 }
+
 
 .nav--visible-features {
   visibility: visible;
@@ -349,10 +353,6 @@ section {
     display: none;
   }
 
-  .container {
-    height: auto;
-  }
-
   .row {
     display: flex;
   }
@@ -416,8 +416,8 @@ section {
     grid-template-areas:
       "cta image";
     gap: 2em;
-    margin-top: 1em;
-    padding: 2em 5em;
+    margin: 3.5em 1em;
+    padding: 3em 5em;
   }
 
   .hero-main {
