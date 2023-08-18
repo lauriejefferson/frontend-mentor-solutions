@@ -218,6 +218,18 @@ section {
   font-weight: var(--fw-400);
 }
 
+.nav-link--features:hover {
+  color: var(--clr-primary-900);
+}
+
+.nav-link--company:hover {
+  color: var(--clr-primary-900);
+}
+
+.nav-link--about:hover {
+  color: var(--clr-primary-900);
+}
+
 .nav-list {
   margin: 3em 1.2em 0.2em 1.2em;
 }
@@ -255,9 +267,19 @@ section {
 }
 
 .nav-link--register {
-  border: 1px solid var(--clr-primary-900);
+  border: 1px solid var(--clr-primary-800);
   border-radius: 10px;
   padding: 0.8em 4em;
+}
+
+.nav-link--login:hover {
+  color: var(--clr-primary-900);
+
+}
+
+.nav-link--register:hover {
+  color: var(--clr-primary-900);
+
 }
 
 .hero-main {
@@ -281,7 +303,16 @@ section {
   padding: 0.8em 1.2em;
   border-radius: 10px;
   margin-bottom: 1em;
+  text-decoration: none;
 }
+
+.hero-link:hover {
+  border: 1px solid var(--clr-primary-900);
+  background-color: var(--clr-primary-100);
+  color: var(--clr-primary-900);
+}
+
+
 
 .hero-icons {
   display: flex;
@@ -364,6 +395,7 @@ section {
     position: relative;
     height: auto;
     background-color: var(--clr-primary-100);
+    margin-left: 1.5em;
   }
 
   .nav-list {
