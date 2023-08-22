@@ -152,7 +152,6 @@ section {
   background-color: white;
 }
 
-
 .nav-nested--features {
   visibility: hidden;
   position: absolute;
@@ -242,6 +241,9 @@ section {
 }
 
 .nav-list-nested-item {
+  /* display: flex;
+  gap: 1em; */
+
   color: var(--clr-primary-800);
   font-weight: var(--fw-400);
 }
@@ -391,8 +393,8 @@ section {
   }
 
   .nav-list-item {
-    margin: 0 1.5em;
-    padding: 0;
+    margin: 0 1em;
+    padding: 0 2em 1em 1em;
     position: relative;
   }
 
@@ -406,9 +408,6 @@ section {
     align-items: center;
   }
 
-  .arrow-up--one {
-    content: url('./images/icon-arrow-down.svg');
-  }
 
   .nav-list-item--company {
     display: flex;
@@ -416,36 +415,27 @@ section {
     align-items: center;
   }
 
-  .arrow-up--two {
-    content: url('./images/icon-arrow-down.svg');
-  }
 
   .nav-list-nested {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background: white;
     border-radius: 15px;
-    margin: 1.2em 0 0 0;
-    padding: 1em 3.5em;
+    margin-top: 1.5em;
   }
 
-  .nav-list-nested-item {
+  .nav-list-nested--features {
     display: flex;
     justify-content: space-evenly;
-    align-items: start;
-    margin: 0;
-    padding: 0.2em 2.5em;
+    align-items: center;
+    margin: 0.5em;
+    padding: 0.25em;
   }
 
-  .nav-list-item--title {
-    text-align: left;
-  }
-
-  .nav-list-nested-item img {
-    margin-right: 1em;
+  .nav-list-nested--company {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5em;
+    padding: 0.25em;
   }
 
   .hero-grid {

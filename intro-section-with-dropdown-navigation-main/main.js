@@ -5,8 +5,8 @@ const features = document.querySelector('.nav-link--features');
 const company = document.querySelector('.nav-link--company');
 const featuresList = document.querySelector('.nav-nested--features');
 const companyList = document.querySelector('.nav-nested--company');
-const arrowUpOne = document.querySelector('.arrow-up--one');
-const arrowUpTwo = document.querySelector('.arrow-up--two');
+const arrowDownOne = document.querySelector('.arrow-down--one');
+const arrowDownTwo = document.querySelector('.arrow-down--two');
 
 navToggle.addEventListener('click', () => {
   nav.classList.toggle('nav--visible');
@@ -24,10 +24,10 @@ navToggleClose.addEventListener('click', (e) => {
 
 features.addEventListener('click', (e) => {
   featuresList.classList.toggle('nav--visible-features');
-  arrowUpOne.classList.toggle('rotate');
+  arrowDownOne.classList.toggle('rotate');
 });
 
 company.addEventListener('click', (e) => {
   companyList.classList.toggle('nav--visible-company');
-  arrowUpTwo.classList.toggle('rotate');
+  arrowDownTwo.classList.toggle('rotate');
 });
