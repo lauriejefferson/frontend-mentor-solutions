@@ -251,7 +251,8 @@ section {
 .nav-link--register {
   border: 1px solid var(--clr-primary-800);
   border-radius: 10px;
-  padding: 0.8em 4em;
+  padding: 0.8em 1.5em;
+  text-align: center;
 }
 
 .nav-link--login:hover {
@@ -315,6 +316,7 @@ section {
 }
 
 @media (max-width: 768px) {
+
   .nav {
     position: fixed;
     font-size: 1rem;
@@ -328,14 +330,21 @@ section {
 
   .nav {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     margin-left: 0;
+    padding-left: 1em;
   }
+
 
   .nav-toggle-close {
     left: 65%;
+  }
+
+  .nav-list-nested--features {
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-list-nested-item {
@@ -345,7 +354,7 @@ section {
 
   .nav-list-item--features {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -394,7 +403,7 @@ section {
 
   .nav-list-item {
     margin: 0 1em;
-    padding: 0 2em 1em 1em;
+    padding: 0 0.5em;
     position: relative;
   }
 
@@ -433,9 +442,23 @@ section {
 
   .nav-list-nested--company {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: start;
     margin: 0.5em;
     padding: 0.25em;
+  }
+
+  .nav-list--secondary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 0.25em;
+    margin-left: 3em;
+  }
+
+  .nav-link--login {
+    margin: 0;
+    padding: 0;
   }
 
   .hero-grid {
