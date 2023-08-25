@@ -14,6 +14,7 @@ navToggle.addEventListener('click', () => {
 
 navToggleClose.addEventListener('click', (e) => {
   nav.classList.toggle('nav--visible');
+
   if (featuresList.classList.contains('nav--visible-features')) {
     featuresList.classList.remove('nav--visible-features');
   }
