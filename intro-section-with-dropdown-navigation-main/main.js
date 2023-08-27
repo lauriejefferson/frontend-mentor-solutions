@@ -1,6 +1,7 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navToggleClose = document.querySelector('.nav-toggle-close');
 const nav = document.querySelector('.nav');
+const navShadow = document.querySelector('.nav-shadow');
 const features = document.querySelector('.nav-link--features');
 const company = document.querySelector('.nav-link--company');
 const featuresList = document.querySelector('.nav-nested--features');
@@ -10,10 +11,12 @@ const arrowDownTwo = document.querySelector('.arrow-down--two');
 
 navToggle.addEventListener('click', () => {
   nav.classList.toggle('nav--visible');
+  navShadow.classList.add('nav--visible');
 });
 
 navToggleClose.addEventListener('click', (e) => {
   nav.classList.toggle('nav--visible');
+  navShadow.classList.remove('nav--visible');
 
   if (featuresList.classList.contains('nav--visible-features')) {
     featuresList.classList.remove('nav--visible-features');
