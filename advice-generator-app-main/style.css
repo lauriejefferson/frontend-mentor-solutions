@@ -127,13 +127,13 @@ blockquote p::after {
   border-radius: 50%;
 }
 
-.icon-dice {
-  display: block;
-  margin: 0 auto;
-}
 
 .attribution {
   margin-top: 5em;
+}
+
+.attribution a {
+  text-decoration: none;
 }
 
 @media (min-width: 375px) {
@@ -148,5 +148,28 @@ blockquote p::after {
 
   .advice {
     padding: 2em;
+  }
+
+  .pattern-divider-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .advice {
+    width: 40%;
+  }
+
+  .pattern-divider-desktop {
+    display: block;
+  }
+
+  .pattern-divider-mobile {
+    display: none;
+  }
+
+  .advice__icon-dice {
+    position: absolute;
+    transform: translate(188px, 10px);
   }
 }
