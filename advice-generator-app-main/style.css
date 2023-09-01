@@ -100,7 +100,7 @@ body {
 }
 
 .advice__text {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--clr-primary-100);
   font-weight: var(--fw-600);
   margin: 1em 0;
@@ -131,6 +131,10 @@ blockquote p::after {
   border-radius: 50%;
 }
 
+.pattern-divider-desktop {
+  display: flex;
+  width: 100%;
+}
 
 .attribution {
   margin-top: 5em;
@@ -154,23 +158,23 @@ blockquote p::after {
     padding: 2em;
   }
 
-  .pattern-divider-mobile {
-    display: flex;
-    width: 100%;
-  }
-
   .pattern-divider-desktop {
     display: none;
+  }
+
+  .pattern-divider-mobile {
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .advice {
-    width: 40%;
+    width: 38%;
+    padding: 2.5em;
   }
 
   .pattern-divider-desktop {
-    display: flex;
+    display: block;
     width: 100%;
   }
 
@@ -180,6 +184,9 @@ blockquote p::after {
 
   .advice__icon-dice {
     position: absolute;
-    transform: translate(188px, 10px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transform: translate(190px, 10px);
   }
 }
