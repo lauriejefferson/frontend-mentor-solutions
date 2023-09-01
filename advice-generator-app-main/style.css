@@ -75,6 +75,10 @@ body {
   max-width: 1440px;
   width: 90%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-primary-900);
   font-family: var(--ff-body);
 }
@@ -150,6 +154,11 @@ blockquote p::after {
     padding: 2em;
   }
 
+  .pattern-divider-mobile {
+    display: flex;
+    width: 100%;
+  }
+
   .pattern-divider-desktop {
     display: none;
   }
@@ -161,7 +170,8 @@ blockquote p::after {
   }
 
   .pattern-divider-desktop {
-    display: block;
+    display: flex;
+    width: 100%;
   }
 
   .pattern-divider-mobile {
