@@ -127,7 +127,7 @@ blockquote p::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(115px, 10px);
+  /* transform: translate(115px, 10px); */
   border-radius: 50%;
 }
 
@@ -165,6 +165,13 @@ blockquote p::after {
   .pattern-divider-mobile {
     width: 100%;
   }
+
+  .advice__icon-dice {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -184,9 +191,8 @@ blockquote p::after {
 
   .advice__icon-dice {
     position: absolute;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    transform: translate(190px, 10px);
+    align-items: center;
   }
 }
