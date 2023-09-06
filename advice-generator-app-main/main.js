@@ -1,4 +1,6 @@
 const url = 'https://api.adviceslip.com/advice';
+const adviceNum = document.querySelector('h6');
+const adviceText = document.querySelector('p');
 
 let advice = '';
 
