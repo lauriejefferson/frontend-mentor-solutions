@@ -83,6 +83,8 @@ body {
   font-family: var(--ff-body);
 }
 
+
+
 .advice {
   background-color: var(--clr-primary-800);
   text-align: center;
@@ -127,8 +129,14 @@ blockquote p::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transform: translate(115px, 10px); */
   border-radius: 50%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.advice__icon-dice:hover {
+  box-shadow: 0px 7px 35px -1px var(--clr-primary-300);
 }
 
 .pattern-divider-desktop {
