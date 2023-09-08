@@ -146,10 +146,12 @@ blockquote p::after {
 
 .attribution {
   margin-top: 5em;
+  color: var(--clr-primary-700);
 }
 
 .attribution a {
   text-decoration: none;
+  color: var(--clr-primary-100);
 }
 
 @media (min-width: 375px) {
