@@ -9,12 +9,17 @@ adviceText.innerHTML =
 
 let result = '';
 async function getAdvice() {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(url, { 'Content-Type': 'application/json' });
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-btn.addEventListener('click', async () => {
+btn.addEventListener('click', async (e) => {
+  e.preventDefault();
   result = await getAdvice();
   adviceNum.innerHTML = `Advice #${result.slip.id}`;
   adviceText.innerHTML = `${result.slip.advice}`;
