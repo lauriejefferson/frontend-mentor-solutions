@@ -86,6 +86,7 @@ body {
 
 .container {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 a {
@@ -96,8 +97,6 @@ a {
 a:active {
   color: white;
 }
-
-
 
 .profile {
   background-color: var(--dark-blue);
@@ -155,7 +154,7 @@ a:active {
 
 .last-week {
   color: var(--pale-blue);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .last-week-hours {
@@ -164,36 +163,54 @@ a:active {
 }
 
 .work {
+  background-image: url('./images/icon-work.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--work);
   padding-top: 2.5em;
   border-radius: 20px;
 }
 
 .play {
+  background-image: url('./images/icon-play.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--play);
   padding-top: 2.5em;
   border-radius: 20px;
 }
 
 .study {
+  background-image: url('./images/icon-study.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--study);
   padding-top: 2.5em;
   border-radius: 20px;
 }
 
 .exercise {
+  background-image: url('./images/icon-exercise.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--exercise);
   padding-top: 2.5em;
   border-radius: 20px;
 }
 
 .social {
+  background-image: url('./images/icon-social.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--social);
   padding-top: 2.5em;
   border-radius: 20px;
 }
 
 .selfcare {
+  background-image: url('./images/icon-self-care.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--selfcare);
   padding-top: 2.5em;
   border-radius: 20px;
@@ -230,5 +247,34 @@ a:active {
     gap: 1.2em;
     padding: 1em;
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .profile {
+    grid-row: span 3;
+  }
+
+  .profile__heading {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vh;
+  }
+
+  .profile__heading--image {
+    width: auto;
+    height: 35%;
+  }
+
+  .profile__timetracker {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 }
