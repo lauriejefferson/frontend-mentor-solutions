@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --study: hsl(348, 100%, 68%);
   --exercise: hsl(145, 58%, 55%);
   --social: hsl(264, 64%, 52%);
-  --self-care: hsl(43, 84%, 65%);
+  --selfcare: hsl(43, 84%, 65%);
 
   --blue: hsl(246, 80%, 60%);
 
@@ -142,7 +142,7 @@ a:active {
   border-radius: 20px;
 }
 
-h4 {
+.title {
   color: white;
   font-weight: var(--fw-300);
 }
@@ -169,17 +169,59 @@ h4 {
   border-radius: 20px;
 }
 
-.work .work__heading {
-  background-color: var(--work);
+.play {
+  background-color: var(--play);
+  padding-top: 2.5em;
+  border-radius: 20px;
 }
 
-.work .work__contents {
+.study {
+  background-color: var(--study);
+  padding-top: 2.5em;
+  border-radius: 20px;
+}
+
+.exercise {
+  background-color: var(--exercise);
+  padding-top: 2.5em;
+  border-radius: 20px;
+}
+
+.social {
+  background-color: var(--social);
+  padding-top: 2.5em;
+  border-radius: 20px;
+}
+
+.selfcare {
+  background-color: var(--selfcare);
+  padding-top: 2.5em;
+  border-radius: 20px;
+}
+
+.contents {
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: var(--dark-blue);
   padding: 1em;
   border-radius: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
+  gap: 1em;
+}
+
+.ellipse {
+  width: 25px;
+}
+
+.attribution {
+  text-align: center;
 }
 
 @media (min-width: 375px) {
