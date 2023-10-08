@@ -298,7 +298,7 @@ a:active {
 
   .bottom {
     display: flex;
-    align-content: start;
+    align-items: start;
     flex-direction: column;
     padding-bottom: 2.5em;
   }
