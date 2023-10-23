@@ -164,6 +164,12 @@ a:active {
   font-size: 0.7rem;
 }
 
+.daily:hover,
+.weekly:hover,
+.montly:hover {
+  color: white;
+}
+
 .work {
   background-image: url('./images/icon-work.svg');
   background-repeat: no-repeat;
@@ -239,13 +245,10 @@ a:active {
   align-items: center;
 }
 
-.ellipse {
-  width: 25px;
+.top svg path:hover {
+  fill: white;
 }
 
-.ellipse:active {
-  color: white;
-}
 
 .attribution {
   text-align: center;
@@ -272,7 +275,7 @@ a:active {
     gap: 2em;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    width: 80%;
+    width: 85%;
   }
 
   .profile {
