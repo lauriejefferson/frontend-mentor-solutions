@@ -99,6 +99,13 @@ a:active {
   color: white;
 }
 
+button {
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--desaturated-blue);
+  text-align: left;
+}
+
 .profile {
   background-color: var(--dark-blue);
   border-radius: 20px;
@@ -161,7 +168,7 @@ a:active {
 
 .last-week-hours {
   color: var(--pale-blue);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .daily:hover,
