@@ -7,7 +7,9 @@ export default {
         generous. If you have any questions, our support team would be happy to
         help you.
     </p>
-    <input type="text" placeholder="email@example.com"/>
-    <button class="sign-up-form__submit">Get Started For Free </button>
+    <form action="#">
+      <input type="text" placeholder="email@example.com"/>
+      <button class="sign-up-form__submit">Get Started For Free </button>
+    </form>
   </div>`,
 };
