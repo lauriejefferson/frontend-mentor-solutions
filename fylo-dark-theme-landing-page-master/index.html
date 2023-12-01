@@ -40,7 +40,11 @@
     </header>
     <main class="main">
       <section class="hero">
-        <img src="./images/illustration-intro.png" alt="hero" />
+        <img
+          src="./images/illustration-intro.png"
+          alt="hero"
+          class="hero__img"
+        />
         <h1 class="hero__title">
           All your files in one secure <br />
           location, accessible <br />
@@ -54,7 +58,7 @@
         <a href="#" class="hero__link">Get Started</a>
       </section>
       <section class="features">
-        <div class="card">
+        <div class="features__card">
           <svg width="83" height="78" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -106,7 +110,7 @@
             account means your files follow you everywhere.
           </p>
         </div>
-        <div class="card">
+        <div class="features__card">
           <svg width="70" height="88" xmlns="http://www.w3.org/2000/svg">
             <g
               stroke="#62E0D9"
@@ -131,7 +135,7 @@
             couple of the security features we allow to help secure your files.
           </p>
         </div>
-        <div class="card">
+        <div class="features__card">
           <svg width="86" height="71" xmlns="http://www.w3.org/2000/svg">
             <g
               stroke="#62E0D9"
@@ -173,7 +177,7 @@
             for live collaboration. No email attachments required.
           </p>
         </div>
-        <div class="card">
+        <div class="features__card">
           <svg width="91" height="64" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -225,7 +229,11 @@
       </section>
       <section class="stay-productive">
         <div>
-          <img src="./images/illustration-stay-productive.png" alt="" />
+          <img
+            src="./images/illustration-stay-productive.png"
+            alt=""
+            class="stay-productive__img"
+          />
         </div>
         <div>
           <h1 class="stay-productive__title">
@@ -239,48 +247,50 @@
             Securely share files and folders with friends, family and colleagues
             for live collaboration. No email attachments required.
           </p>
-          <a href="#" class="stay-productive__link">
-            See how Fylo works
-            <span class="stay-productive__link--icon"
-              ><svg
-                width="16"
-                height="16"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <defs>
-                  <circle id="b" cx="6" cy="6" r="6" />
-                  <filter
-                    x="-25%"
-                    y="-25%"
-                    width="150%"
-                    height="150%"
-                    filterUnits="objectBoundingBox"
-                    id="a"
-                  >
-                    <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
-                    <feGaussianBlur
-                      stdDeviation="1"
-                      in="shadowOffsetOuter1"
-                      result="shadowBlurOuter1"
+          <div class="stay-productive__underline">
+            <a href="#" class="stay-productive__link">
+              See how Fylo works
+              <span class="stay-productive__link--icon"
+                ><svg
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <circle id="b" cx="6" cy="6" r="6" />
+                    <filter
+                      x="-25%"
+                      y="-25%"
+                      width="150%"
+                      height="150%"
+                      filterUnits="objectBoundingBox"
+                      id="a"
+                    >
+                      <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+                      <feGaussianBlur
+                        stdDeviation="1"
+                        in="shadowOffsetOuter1"
+                        result="shadowBlurOuter1"
+                      />
+                      <feColorMatrix
+                        values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
+                        in="shadowBlurOuter1"
+                      />
+                    </filter>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <g transform="translate(2 2)">
+                      <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                      <use fill="#62E0D9" xlink:href="#b" />
+                    </g>
+                    <path
+                      d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                      fill="#1B2330"
                     />
-                    <feColorMatrix
-                      values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
-                      in="shadowBlurOuter1"
-                    />
-                  </filter>
-                </defs>
-                <g fill="none" fill-rule="evenodd">
-                  <g transform="translate(2 2)">
-                    <use fill="#000" filter="url(#a)" xlink:href="#b" />
-                    <use fill="#62E0D9" xlink:href="#b" />
-                  </g>
-                  <path
-                    d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
-                    fill="#1B2330"
-                  />
-                </g></svg></span
-          ></a>
+                  </g></svg></span
+            ></a>
+          </div>
         </div>
       </section>
       <section class="social">

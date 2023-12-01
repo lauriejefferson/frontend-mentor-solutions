@@ -107,10 +107,8 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1em 0 10em 0;
-  padding: 2em;
-
-
+  margin: 1em 0 4em 0;
+  padding: 3em;
 }
 
 .nav .nav__logo {
@@ -131,9 +129,10 @@ section {
   background-image: url('./images/bg-curvy-mobile.svg');
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 270px;
+  background-size: 100% 360px;
   width: 100%;
 }
+
 
 .hero__title {
   font-size: 2.75rem;
@@ -142,37 +141,47 @@ section {
   text-align: center;
 }
 
+
 .hero__text {
   font-size: 1.8rem;
   margin-bottom: 3em;
   text-align: center;
+  padding: 1em 1em 0 1em;
 }
 
 .hero__link {
   background-color: var(--blue);
-  padding: 1.5em 7em;
+  padding: 1em 5em;
   color: white;
   font-weight: var(--fw-700);
   border-radius: 100px;
-
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 .main {
   min-height: 100vh;
   position: relative;
-
 }
 
 .features {
   background-color: var(--dark-blue-2);
+  text-align: center;
 }
 
-.features .card {
+.features .features__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5em;
+}
+
+.features .features__card svg {
+  transform: scale(1.5);
+  margin: 2em 0;
 }
 
 .features__title {
@@ -189,29 +198,47 @@ section {
 .stay-productive {
   min-height: 60vh;
   background-color: var(--dark-blue-2);
+  text-align: center;
+  padding: 0 4em;
+}
+
+.stay-productive__img {
+  display: inline-flex;
+
 }
 
 .stay-productive__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: var(--fw-500);
-  margin: 1em 0;
+  margin: 2em 0 1em 0;
+
 }
 
 .stay-productive__text {
   font-size: 1.7rem;
   font-weight: var(--fw-300);
   margin: 1em 0;
+  text-align: left;
+
 }
 
 .stay-productive__link {
   display: flex;
   align-items: center;
-  text-decoration: solid;
-  color: var(--cyan)
+  text-decoration: none;
+  color: var(--cyan);
+  padding-bottom: 0.5em;
 }
 
 .stay-productive__link--icon {
   margin-left: 0.5em;
+  transform: scale(1.8);
+
+}
+
+.stay-productive__underline {
+  width: 37%;
+  border-bottom: 2px solid var(--cyan);
 }
 
 .social {
@@ -271,7 +298,7 @@ section {
 .early-access {
   position: absolute;
   z-index: 1000;
-  transform: translateY(-70%) translateX(5%);
+  transform: translateY(-50%) translateX(5%);
   padding: 2em;
   background-color: var(--dark-blue-1);
   width: 90%;
@@ -327,7 +354,7 @@ footer {
 
 .footer__logo {
   transform: scale(2);
-  margin: 20em 8em 8em 8em;
+  margin: 35em 8em 8em 8em;
 }
 
 .footer__links {
