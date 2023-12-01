@@ -409,3 +409,31 @@ footer {
   font-size: 2rem;
   font-weight: var(--fw-300);
 }
+
+@media(min-width: 768px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .stay-productive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stay-productive__underline {
+    width: 50%;
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    min-height: 30vh;
+  }
+
+  .social .quotes {
+    transform: translate(70%, 80%);
+  }
+}
