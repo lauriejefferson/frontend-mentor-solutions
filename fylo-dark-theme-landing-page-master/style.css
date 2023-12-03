@@ -73,6 +73,7 @@ li {
   --light-red: hsl(0, 100%, 63%);
   --white: hsl(0, 0%, 100%);
 
+
   --fs-body: 14px;
   --ff-heading: 'Raleway', sans-serif;
   --ff-body: 'Open Sans', sans-serif;
@@ -94,7 +95,6 @@ body {
 a {
   text-decoration: none;
   color: var(--white);
-  font-size: 1.5rem;
   font-weight: var(--fw-300);
 }
 
@@ -135,28 +135,28 @@ section {
 
 
 .hero__title {
-  font-size: 2.75rem;
+  font-size: 2.2rem;
   font-weight: var(--fw-700);
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   text-align: center;
 }
 
 
 .hero__text {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 3em;
   text-align: center;
   padding: 1em 1em 0 1em;
 }
 
 .hero__link {
-  background-color: var(--blue);
+  background: linear-gradient(to right, var(--cyan), var(--blue));
   padding: 1em 5em;
   color: white;
   font-weight: var(--fw-700);
   border-radius: 100px;
   letter-spacing: 1.2px;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -180,18 +180,18 @@ section {
 }
 
 .features .features__card svg {
-  transform: scale(1.5);
+  transform: scale(1.1);
   margin: 2em 0;
 }
 
 .features__title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: var(--fw-500);
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 .features__text {
-  font-size: 1.75rem;
+  font-size: 1.12rem;
   font-weight: var(--fw-300);
 }
 
@@ -199,7 +199,7 @@ section {
   min-height: 60vh;
   background-color: var(--dark-blue-2);
   text-align: center;
-  padding: 0 4em;
+  padding: 4em;
 }
 
 .stay-productive__img {
@@ -208,14 +208,14 @@ section {
 }
 
 .stay-productive__title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: var(--fw-500);
   margin: 2em 0 1em 0;
 
 }
 
 .stay-productive__text {
-  font-size: 1.7rem;
+  font-size: 1.12rem;
   font-weight: var(--fw-300);
   margin: 1em 0;
   text-align: left;
@@ -228,10 +228,11 @@ section {
   text-decoration: none;
   color: var(--cyan);
   padding-bottom: 0.5em;
+  font-size: 1.1rem;
 }
 
 .stay-productive__link--icon {
-  margin-left: 0.5em;
+  margin-left: 1em;
   transform: scale(1.8);
 
 }
@@ -242,9 +243,9 @@ section {
 }
 
 .social {
-  min-height: 100vh;
+  min-height: 30vh;
   background-color: var(--dark-blue-2);
-  padding: 7em;
+  padding: 5em 5em 20em 7.5em;
   position: relative;
   z-index: 1;
 }
@@ -257,13 +258,13 @@ section {
 
 .social__card {
   background-color: var(--dark-blue-1);
-  margin: 3em 0;
-  padding: 2.5em;
+  margin: 5em 0;
+  padding: 1.5em 2em;
   border-radius: 10px;
 }
 
 .social__card--text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: var(--fw-300);
   margin: 1em 0;
   line-height: 1.9;
@@ -284,14 +285,14 @@ section {
 }
 
 .social__card--footer--profile-title {
-  font-size: 1.14rem;
+  font-size: 1rem;
   font-weight: var(--fw-500);
   letter-spacing: 2px;
   margin-bottom: 0.5em;
 }
 
 .social__card--footer--profile small {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: var(--fw-300);
 }
 
@@ -339,7 +340,7 @@ section {
   padding: 1em;
   border: none;
   border-radius: 120px;
-  background-color: var(--blue);
+  background: linear-gradient(to right, var(--cyan), var(--blue));
   color: white;
   font-size: 1.7rem;
   font-weight: var(--fw-500);
@@ -411,6 +412,11 @@ footer {
 }
 
 @media(min-width: 768px) {
+
+  .hero__text {
+    padding: 0 10em;
+  }
+
   .features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -420,20 +426,35 @@ footer {
   .stay-productive {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 40vh;
+    text-align: left;
   }
 
   .stay-productive__underline {
-    width: 50%;
+    width: 30%;
   }
 
   .social {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
-    min-height: 30vh;
+    grid-template-columns: repeat(3, 400px);
+    gap: 3em;
+
   }
 
+
   .social .quotes {
-    transform: translate(70%, 80%);
+    transform: translate(100px, 100px);
+  }
+
+
+  .early-access {
+    width: 70%;
+    padding: 3em;
+    transform: translate(25%, -10%);
+  }
+
+  .early-access form {
+    display: flex;
+    flex-direction: row;
   }
 }
