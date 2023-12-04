@@ -90,6 +90,9 @@ body {
   font-size: var(--fs-body);
   background-color: var(--dark-blue-1);
   color: var(--white);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 a {
@@ -314,10 +317,10 @@ section {
 }
 
 .early-access__text {
-  font-size: 1.7rem;
+  font-size: 1rem;
   font-weight: var(--fw-300);
   text-align: center;
-  margin: 1.5em;
+  margin: 1em;
 }
 
 .early-access form {
@@ -329,20 +332,20 @@ section {
 
 .early-access form input[type="text"] {
   width: 90%;
-  margin: 3em;
-  padding: 2.5em;
+  margin: 1em 1.5em;
+  padding: 1em;
   border: none;
   border-radius: 120px;
 }
 
 .early-access form button {
-  width: 90%;
-  padding: 1em;
+  width: 40%;
+  padding: 0.8em;
   border: none;
   border-radius: 120px;
   background: linear-gradient(to right, var(--cyan), var(--blue));
   color: white;
-  font-size: 1.7rem;
+  font-size: 1rem;
   font-weight: var(--fw-500);
 
 }
@@ -350,11 +353,11 @@ section {
 footer {
   background-color: var(--dark-blue-3);
   padding: 3.5em;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .footer__logo {
-  transform: scale(2);
+  /* transform: scale(2); */
   margin: 35em 8em 8em 8em;
 }
 
@@ -376,7 +379,7 @@ footer {
   justify-content: center;
   align-items: baseline;
   gap: 0.25em;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: var(--fw-300);
 }
 
@@ -402,12 +405,12 @@ footer {
 }
 
 .footer__about--link a {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: var(--fw-300);
 }
 
 .footer__contact--link a {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: var(--fw-300);
 }
 
@@ -441,20 +444,27 @@ footer {
 
   }
 
-
   .social .quotes {
     transform: translate(100px, 100px);
   }
 
-
   .early-access {
-    width: 70%;
-    padding: 3em;
-    transform: translate(25%, -10%);
+    width: 60%;
+    padding: 1.5em 3em;
+    transform: translate(35%, -50%);
   }
 
   .early-access form {
     display: flex;
     flex-direction: row;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__info {
+    display: flex;
   }
 }
