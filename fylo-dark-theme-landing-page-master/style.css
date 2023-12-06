@@ -339,7 +339,7 @@ section {
 }
 
 .early-access form button {
-  width: 40%;
+  width: 90%;
   padding: 0.8em;
   border: none;
   border-radius: 120px;
@@ -348,17 +348,16 @@ section {
   font-size: 1rem;
   font-weight: var(--fw-500);
 
+
 }
 
 footer {
   background-color: var(--dark-blue-3);
   padding: 3.5em;
-  /* margin: 0 auto; */
 }
 
 .footer__logo {
-  /* transform: scale(2); */
-  margin: 35em 8em 8em 8em;
+  margin: 20em 0 3em 0;
 }
 
 .footer__links {
@@ -366,27 +365,24 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2em;
+  gap: 2.5em;
   margin: 1em 0;
 }
 
-.footer__svg {
-  transform: scale(1.8)
-}
 
 .footer__link {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
-  gap: 0.25em;
+  gap: 1em;
   font-size: 1rem;
   font-weight: var(--fw-300);
 }
 
-.footer__link p {
-  margin-left: 1em;
+.footer__link--text {
+  text-align: left;
+  max-width: 40ch;
 }
-
 
 .footer__about {
   display: flex;
@@ -412,6 +408,21 @@ footer {
 .footer__contact--link a {
   font-size: 1rem;
   font-weight: var(--fw-300);
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.footer__social--link {
+  border: 2px solid white;
+  padding: 1em;
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 1em;
 }
 
 @media(min-width: 768px) {
@@ -462,9 +473,46 @@ footer {
   .footer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20em 10em;
   }
 
   .footer__info {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 3em;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+    margin: 1em 0;
+  }
+
+  .footer__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 1em;
+    font-size: 1rem;
+    font-weight: var(--fw-300);
+  }
+
+  .footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+  }
+
+  .footer__social--link {
+    display: flex;
+    justify-content: center;
+    margin-left: 2em;
   }
 }
