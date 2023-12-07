@@ -1,4 +1,10 @@
-import { createApp } from 'vue';
-import MyComponent from './my-component.js';
+const input = document.querySelector('input');
+const btn = document.querySelector('.early-access__submit');
+const errorMessage = document.querySelector('.error-message');
 
-createApp(MyComponent).mount('#app');
+btn.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (input.value && input.validity.patternMismatch === true) {
+    errorMessage.style.visibility = 'visible';
+  }
+});

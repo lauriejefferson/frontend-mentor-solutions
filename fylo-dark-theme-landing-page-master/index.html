@@ -31,10 +31,10 @@
               />
             </g></svg
         ></a>
-        <ul class="nav-list">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Sign In</a></li>
+        <ul class="nav__list">
+          <li class="nav__link"><a href="#">Features</a></li>
+          <li class="nav__link"><a href="#">Team</a></li>
+          <li class="nav__link"><a href="#">Sign In</a></li>
         </ul>
       </nav>
     </header>
@@ -257,7 +257,13 @@
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                 >
                   <defs>
-                    <circle id="b" cx="6" cy="6" r="6" />
+                    <circle
+                      id="b"
+                      cx="6"
+                      cy="6"
+                      r="6"
+                      class="stay-productive__link--svg"
+                    />
                     <filter
                       x="-25%"
                       y="-25%"
@@ -346,8 +352,18 @@
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </p>
-        <form action="#">
-          <input type="text" placeholder="email@example.com" />
+        <form action="#" novalidate>
+          <div class="input">
+            <input
+              type="email"
+              placeholder="email@example.com"
+              required
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            />
+            <small class="error-message"
+              >Please enter a valid email address</small
+            >
+          </div>
           <button class="early-access__submit">Get Started For Free</button>
         </form>
       </section>
@@ -441,6 +457,7 @@
                 height="14"
                 width="24"
                 viewBox="0 0 320 512"
+                class="footer__social--svg"
               >
                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
                 <path
@@ -456,6 +473,7 @@
                 height="14"
                 width="24"
                 viewBox="0 0 512 512"
+                class="footer__social--svg"
               >
                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
                 <path
@@ -471,6 +489,7 @@
                 height="14"
                 width="24"
                 viewBox="0 0 448 512"
+                class="footer__social--svg"
               >
                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
                 <path
@@ -482,42 +501,40 @@
         </ul>
       </div>
     </footer>
-    <!-- <p class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </p>
-    <ul class="social-icons">
-      <li>
-        <a
-          href="https://www.flaticon.com/free-icons/facebook"
-          title="facebook icons"
-          >Facebook icons created by Stockio - Flaticon</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.flaticon.com/free-icons/twitter"
-          title="twitter icons"
-          >Twitter icons created by Stockio - Flaticon</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.flaticon.com/free-icons/instagram"
-          title="instagram icons"
-          >Instagram icons created by Payungkead - Flaticon</a
-        >
-      </li>
-    </ul> -->
-    <script type="importmap">
-      {
-        "imports": {
-          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-        }
-      }
-    </script>
+    <div class="attribution">
+      <p class="attribution-text">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://frontendmentor.io/profile/lauriejefferson"
+          >Laurie Jefferson</a
+        >.
+      </p>
+      <ul class="attribution-social-icons">
+        <li>
+          <a
+            href="https://www.flaticon.com/free-icons/facebook"
+            title="facebook icons"
+            >Facebook icons created by Stockio - Flaticon</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.flaticon.com/free-icons/twitter"
+            title="twitter icons"
+            >Twitter icons created by Stockio - Flaticon</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.flaticon.com/free-icons/instagram"
+            title="instagram icons"
+            >Instagram icons created by Payungkead - Flaticon</a
+          >
+        </li>
+      </ul>
+    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>
