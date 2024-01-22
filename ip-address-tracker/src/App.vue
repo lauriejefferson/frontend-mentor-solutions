@@ -14,7 +14,7 @@ const timezone = ref(null);
 const isp = ref(null) 
 const lat = ref(null)
 const lon = ref(null)
-const center = [38.8104, -76.9982]
+const center = [38.8937, -77.0971]
 const mapDiv = ref(null)
 const iconLocation = L.icon({
     iconUrl: locationIcon,
