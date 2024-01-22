@@ -18,7 +18,7 @@ const center = [38.8937, -77.0971]
 const mapDiv = ref(null)
 const iconLocation = L.icon({
     iconUrl: locationIcon,
-    iconSize: [64, 64],
+    iconSize: [50, 64],
     iconAnchor: [22,22]
 })
 function setupLeafletMap() {
@@ -64,8 +64,10 @@ async function getGeolocation(){
         <header>
             <h1 class="main-title">IP Address Tracker</h1>
             <form @submit.prevent="getGeolocation()">
+                <div class="form-control">
                 <input type="text" v-model="ipAddress">
                 <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
+                </div>
             </form>
         </header>    
          <div class="modal" v-show="showModal">
@@ -104,27 +106,34 @@ header {
     background-clip: border-box;
     background-position: center;
     position: relative;
-    height: 25vh;
+    height: 35vh;
 }
 form {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     margin: 1em 0;
 }
 
+.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 1em;
+}
 input {
     width: 80%;
-    padding: 0.8em 1.8em;
+    padding: 0.7em 1.8em;
     border: none;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 button {
     cursor: pointer;
-    position: absolute;
-    inset: 0 24px 0 auto;
-    padding: 1em 1.25em;
+    padding: 1.12em 1.25em;
     background-color: var(--black);
     border: none;
     border-top-right-radius: 10px;
@@ -139,15 +148,36 @@ button {
 
 
 .modal {
+    align-items: center;
     background-color: var(--anti-flash-white);
-    margin: 2em;
-    width: 18.5em;
-    height: 350px;
-    padding: 1.5em 5em;
+    margin: 2em 0;
+    width: 80%;
+    height: 320px;
+    padding: 1.5em 2.5em;
     position: absolute;
-    inset: 8em 0.5em ;
+    inset: 10em 6em ;
     z-index: 1000;
     border: none;
     border-radius: 20px;
+}
+
+.modal div {
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+    .modal {
+        display: flex;
+        justify-content: center;
+        height: 120px;
+        width: 70%;
+    }
+
+    .modal div{
+        padding-right: 2em; 
+    }
+    .text {
+        font-size: 1.4rem;
+    }
 }
 </style>
