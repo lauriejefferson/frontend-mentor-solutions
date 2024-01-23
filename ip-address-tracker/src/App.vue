@@ -81,7 +81,7 @@ async function getGeolocation(){
                 </div>
                 <div class="timezone">
                     <h3 class="title">Timezone</h3>
-                    <p class="text">{{ timezone }}</p>
+                    <p class="text">UTC {{ timezone }}</p>
                 </div>
                 <div class="isp">
                     <h3 class="title">isp</h3>
@@ -152,10 +152,10 @@ button {
     background-color: var(--anti-flash-white);
     margin: 2em 0;
     width: 80%;
-    height: 320px;
-    padding: 1.5em 2.5em;
+    height: 50vh;
+    padding: 1.4em 2.5em;
     position: absolute;
-    inset: 10em 6em ;
+    inset: 10em 4em ;
     z-index: 1000;
     border: none;
     border-radius: 20px;
@@ -165,19 +165,38 @@ button {
     margin-bottom: 0.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     .modal {
-        display: flex;
-        justify-content: center;
-        height: 120px;
-        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+        height: 25vh;
+        width: 90%;
+        padding: 2em;
+        inset: 10em 5em;
     }
 
     .modal div{
-        padding-right: 2em; 
+        display: grid;
+        grid-template-rows: subgrid;
+        align-items: baseline;
+        grid-row: span 2;
+        border-right: 1px solid var(--dark-gray);
+        padding-right: 1em;
+    }
+
+    .modal div:last-child {
+        border-right: none;
+    }
+
+    .title {
+        text-align: left;
     }
     .text {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        font-weight: var(--fw-500);
+        text-align: left;
     }
 }
 </style>

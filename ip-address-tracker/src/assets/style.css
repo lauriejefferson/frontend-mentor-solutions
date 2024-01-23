@@ -127,12 +127,11 @@ body {
 }
 
 
-
 .text {
     font-weight: var(--fw-500);
     color: var(--very-dark-gray);
     text-align: center;
-    padding: 0.1em 1em;
+    padding: 0.1em 0;
     font-size: 1.25rem;
 }
 
