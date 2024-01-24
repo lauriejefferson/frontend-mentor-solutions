@@ -1,5 +1,4 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
 import { onMounted, ref } from 'vue';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -14,6 +13,7 @@ const timezone = ref(null);
 const isp = ref(null) 
 const lat = ref(null)
 const lon = ref(null)
+
 const center = [38.8937, -77.0971]
 const mapDiv = ref(null)
 const iconLocation = L.icon({
@@ -33,16 +33,26 @@ function setupLeafletMap() {
     ).addTo(mapDiv.value);
 }
 
+async function getUserIp() {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json()
+    ipAddress.value = data.ip;
+    await getGeolocation();
+
+}
 
 onMounted(() => {
     setupLeafletMap();
+    getUserIp();
 });
+
 
 async function getGeolocation(){
     showModal.value = true;
     const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress.value}`
     const response = await fetch(url)
     const data = await response.json()
+    console.log(ipAddress.value)
     console.log(data)
     ip.value = data.ip
     location.value = `${data.location.city}, ${data.location.region}`
@@ -123,12 +133,17 @@ form {
     width: 50%;
     padding: 1em;
 }
-input {
+input[type="text"] {
     width: 80%;
     padding: 0.7em 1.8em;
     border: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    outline: none;
+}
+
+input:focus {
+    cursor: pointer; 
 }
 
 button {
@@ -140,22 +155,23 @@ button {
     border-bottom-right-radius: 10px;
 }
 
+button:hover {
+   background-color: var(--very-dark-gray);
+}
 #mapContainer {
     display: block;
     width: 100%;
     height: 100vh;
 }
-
-
 .modal {
     align-items: center;
     background-color: var(--anti-flash-white);
     margin: 2em 0;
     width: 80%;
-    height: 50vh;
-    padding: 1.4em 2.5em;
+    height: 40vh;
+    padding: 1.8em 2.5em;
     position: absolute;
-    inset: 10em 4em ;
+    inset: 9em 4em ;
     z-index: 1000;
     border: none;
     border-radius: 20px;

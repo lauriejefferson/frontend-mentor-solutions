@@ -109,10 +109,10 @@ body {
 }
 
 .main-title {
-    font-weight: var(--fw-500);
-    font-size: 1.5rem;
+    font-weight: var(--fw-400);
+    font-size: 1.8rem;
     text-align: center;
-    padding: 1em;
+    padding: 1em 1em 0 1em;
     letter-spacing: 1.5px;
 }
 
