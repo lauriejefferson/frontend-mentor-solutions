@@ -81,6 +81,7 @@ body {
   align-items: center;
   background-color: var(--clr-primary-900);
   font-family: var(--ff-body);
+  margin-inline: auto;
 }
 
 
@@ -91,6 +92,7 @@ body {
   position: relative;
   border-radius: 7px;
   padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .advice__number {
@@ -134,6 +136,9 @@ blockquote p::after {
   padding: 0;
   border: none;
   cursor: pointer;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .advice__icon-dice:hover {
@@ -141,7 +146,10 @@ blockquote p::after {
 }
 
 .pattern-divider-desktop {
-  display: flex;
+  display: none;
+}
+
+.pattern-divider-mobile {
   width: 100%;
 }
 
@@ -156,39 +164,9 @@ blockquote p::after {
   color: var(--clr-primary-100);
 }
 
-@media (min-width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0 auto;
-  }
-
-  .advice {
-    padding: 2em;
-  }
-
-  .pattern-divider-desktop {
-    display: none;
-  }
-
-  .pattern-divider-mobile {
-    width: 100%;
-  }
-
-  .advice__icon-dice {
-    position: absolute;
-    top: 100%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-}
-
 @media (min-width: 768px) {
   .advice {
-    width: 38%;
+    width: 50%;
     padding: 2.5em;
   }
 

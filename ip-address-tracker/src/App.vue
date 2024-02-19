@@ -210,7 +210,7 @@ button:hover {
         text-align: left;
     }
     .text {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: var(--fw-500);
         text-align: left;
     }
