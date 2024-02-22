@@ -245,7 +245,6 @@ header {
 }
 
 .hero-title {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,7 +548,7 @@ header {
     align-items: baseline;
     background-color: transparent;
     margin: 0;
-    padding-inline: 2em;
+    padding: 0 2.5em;
   }
 
   .nav-list::before {
