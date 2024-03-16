@@ -5,12 +5,13 @@ import L from "leaflet";
 import locationIcon from './images/icon-location.svg'
 
 const apiKey = import.meta.env.VITE_API_KEY;
+const defaultIP = import.meta.env.VITE_IP_ADDRESS;
 const showModal = ref(false);
 const ipAddress = ref(null);
 const ip = ref(null)
 const location = ref(null);
 const timezone = ref(null);
-const isp = ref(null) 
+const isp = ref(null)
 const lat = ref(null)
 const lon = ref(null)
 
@@ -19,7 +20,7 @@ const mapDiv = ref(null)
 const iconLocation = L.icon({
     iconUrl: locationIcon,
     iconSize: [50, 64],
-    iconAnchor: [22,22]
+    iconAnchor: [22, 22]
 })
 function setupLeafletMap() {
     mapDiv.value = L.map("mapContainer").setView(center, 13);
@@ -47,13 +48,11 @@ onMounted(() => {
 });
 
 
-async function getGeolocation(){
+async function getGeolocation() {
     showModal.value = true;
     const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress.value}`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(ipAddress.value)
-    console.log(data)
     ip.value = data.ip
     location.value = `${data.location.city}, ${data.location.region}`
     timezone.value = data.location.timezone
@@ -61,7 +60,7 @@ async function getGeolocation(){
     lat.value = data.location.lat
     lon.value = data.location.lng
 
-    L.marker([lat.value, lon.value], {icon: iconLocation}).addTo(mapDiv.value)
+    L.marker([lat.value, lon.value], { icon: iconLocation }).addTo(mapDiv.value)
     mapDiv.value.setView([lat.value, lon.value])
     mapDiv.value.setZoom(20)
 }
@@ -75,40 +74,34 @@ async function getGeolocation(){
             <h1 class="main-title">IP Address Tracker</h1>
             <form @submit.prevent="getGeolocation()">
                 <div class="form-control">
-                <input type="text" v-model="ipAddress">
-                <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
+                    <input type="text" v-model="ipAddress">
+                    <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
                 </div>
             </form>
-        </header>    
-         <div class="modal" v-show="showModal">
-                <div class="ip-address">
-                    <h3 class="title">Ip Address</h3>
-                    <p class="text">{{ ip }}</p>
-                </div>
-                <div class="location">
-                    <h3 class="title">Location</h3>
-                    <p class="text">{{ location }}</p>
-                </div>
-                <div class="timezone">
-                    <h3 class="title">Timezone</h3>
-                    <p class="text">UTC {{ timezone }}</p>
-                </div>
-                <div class="isp">
-                    <h3 class="title">isp</h3>
-                    <p class="text">{{ isp }}</p>
-                </div>
-              </div>
-              <div id="mapContainer"></div>
+        </header>
+        <div class="modal" v-show="showModal">
+            <div class="modal__section ip-address">
+                <h3 class="title">Ip Address</h3>
+                <p class="text">{{ ip }}</p>
+            </div>
+            <div class="modal__section location">
+                <h3 class="title">Location</h3>
+                <p class="text">{{ location }}</p>
+            </div>
+            <div class="modal__section timezone">
+                <h3 class="title">Timezone</h3>
+                <p class="text">UTC {{ timezone }}</p>
+            </div>
+            <div class="modal__section isp">
+                <h3 class="title">isp</h3>
+                <p class="text">{{ isp }}</p>
+            </div>
         </div>
+        <div id="mapContainer"></div>
+    </div>
 </template>
 
 <style scoped>
-
-.container {
-    height: 100vh;
-    width: 100%;
-}
-
 header {
     background-image: url('./images/pattern-bg-mobile.png');
     background-repeat: no-repeat;
@@ -118,6 +111,7 @@ header {
     position: relative;
     height: 35vh;
 }
+
 form {
     display: flex;
     justify-content: center;
@@ -133,6 +127,7 @@ form {
     width: 50%;
     padding: 1em;
 }
+
 input[type="text"] {
     width: 80%;
     padding: 0.7em 1.8em;
@@ -143,7 +138,7 @@ input[type="text"] {
 }
 
 input:focus {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 button {
@@ -156,50 +151,53 @@ button {
 }
 
 button:hover {
-   background-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
 }
+
 #mapContainer {
-    display: block;
+    position: absolute;
+    z-index: -1;
     width: 100%;
     height: 100vh;
 }
+
 .modal {
-    align-items: center;
-    background-color: var(--anti-flash-white);
-    margin: 2em 0;
-    width: 80%;
-    height: 40vh;
-    padding: 1.8em 2.5em;
     position: absolute;
-    inset: 9em 4em ;
+    inset: 10em 5em;
+    background-color: var(--anti-flash-white);
+    max-width: 1100px;
+    width: 100%;
+    margin: 4em 5em;
+    padding: 1em 2.5em 2.5em;
     z-index: 1000;
     border: none;
     border-radius: 20px;
 }
 
-.modal div {
+.modal .modal__section {
     margin-bottom: 0.5em;
+}
+
+@media (min-width: 375px) {
+    .modal {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
 }
 
 @media (min-width: 1000px) {
     .modal {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;
-        gap: 1em;
-        height: 25vh;
-        width: 90%;
-        padding: 2em;
+        grid-template-rows: 100px;
+        height: 150px;
         inset: 10em 5em;
     }
 
-    .modal div{
-        display: grid;
-        grid-template-rows: subgrid;
-        align-items: baseline;
-        grid-row: span 2;
+    .modal .modal__section {
         border-right: 1px solid var(--dark-gray);
-        padding-right: 1em;
+        padding-inline: 0.5em;
     }
 
     .modal div:last-child {
@@ -209,6 +207,7 @@ button:hover {
     .title {
         text-align: left;
     }
+
     .text {
         font-size: 1.2rem;
         font-weight: var(--fw-500);
