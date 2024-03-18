@@ -90,9 +90,7 @@ body {
   font-size: var(--fs-body);
   background-color: var(--dark-blue-1);
   color: var(--white);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 a {
@@ -174,7 +172,6 @@ section {
 }
 
 .main {
-  min-height: 100vh;
   position: relative;
 }
 
@@ -208,7 +205,6 @@ section {
 }
 
 .stay-productive {
-  min-height: 60vh;
   background-color: var(--dark-blue-2);
   text-align: center;
   padding: 4em;
@@ -266,7 +262,6 @@ section {
 }
 
 .social {
-  min-height: 30vh;
   background-color: var(--dark-blue-2);
   padding: 5em 5em 20em 7.5em;
   position: relative;
@@ -321,7 +316,7 @@ section {
 
 .early-access {
   position: absolute;
-  z-index: 1000;
+  z-index: 1;
   transform: translateY(-50%) translateX(5%);
   padding: 2em;
   background-color: var(--dark-blue-1);
@@ -499,7 +494,6 @@ footer {
   .stay-productive {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height: 40vh;
     text-align: left;
   }
 
