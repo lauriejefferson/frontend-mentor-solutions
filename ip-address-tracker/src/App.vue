@@ -5,7 +5,6 @@ import L from "leaflet";
 import locationIcon from './images/icon-location.svg'
 
 const apiKey = import.meta.env.VITE_API_KEY;
-const defaultIP = import.meta.env.VITE_IP_ADDRESS;
 const showModal = ref(false);
 const ipAddress = ref(null);
 const ip = ref(null)
@@ -129,7 +128,7 @@ form {
 }
 
 input[type="text"] {
-    width: 80%;
+    width: 100%;
     padding: 0.7em 1.8em;
     border: none;
     border-top-left-radius: 10px;
@@ -159,6 +158,7 @@ button:hover {
     z-index: -1;
     width: 100%;
     height: 100vh;
+    max-width: 1440px;
 }
 
 .modal {
@@ -182,7 +182,9 @@ button:hover {
     .modal {
         display: grid;
         grid-template-columns: 1fr;
+        inset: 10em 1em;
         width: 70%;
+        height: 450px;
     }
 }
 
@@ -191,7 +193,7 @@ button:hover {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100px;
-        height: 150px;
+        height: 160px;
         inset: 10em 5em;
     }
 
@@ -209,8 +211,6 @@ button:hover {
     }
 
     .text {
-        font-size: 1.2rem;
-        font-weight: var(--fw-500);
         text-align: left;
     }
 }
