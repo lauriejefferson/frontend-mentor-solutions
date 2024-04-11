@@ -68,7 +68,7 @@ I used CSS Grid to create the modal of the IP Address response data.  The modal 
 Ipify was easy to use and start making API requests for the IP Address data. I created a ```.env``` file to store the Ipify API Key.  Next, I imported the environmental variable into my project using the Vite environmental variable object import.meta.env. When the user enters an IP address in the input field, its stored in the ```ref()``` variable ```ipAddress```  and then used make a ```fetch```  request to the Ipify Geolocation API to obtain the IP Address response data.  Finally the data is displayed in the Vue template using ```ref()``` variables ```ip```, ```location```, ```timezone``` and ```isp```.
 
 #### Leaflet JS 
-It was pretty straightforward to get Leaflet JS setup in my Vue project. I created an ```div``` with an ```id``` of ```mapContainer``` to mount the map.  I then created a function ```setupLeafletMap``` that sets up the map when the Vue project mounts, and centers the map.  When the user searches for an IP address, Vue will call the Ipify API and display the geolocation data on the map and zoom into the coordinates.  
+It was pretty straightforward to get Leaflet JS setup in my Vue project. I created an ```div``` with an ```id``` of ```mapContainer``` to mount the map.  I then created a function ```setupLeafletMap``` that sets up the map when the Vue project mounts, and centers the map.  The function also uses OpenStreetMap to display the IP Address geolocation coordinates.  When the user searches for an IP address, Vue will call the Ipify API and display the geolocation data on the map and zoom into the coordinates.  
 
 ### Continued development
 
