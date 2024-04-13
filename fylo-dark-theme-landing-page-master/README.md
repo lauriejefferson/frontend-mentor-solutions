@@ -49,6 +49,9 @@ Users should be able to:
 
 ### What I learned
 
+#### Sematic HTML5
+
+
 This project was somewhat challenging since the screen size in the design screenshot for the mobile layout had a width closer to 768px and not the normal 375px as stated in the style guide. I used Font Awesome svgs for the social media icons and added the CSS fill style to them on the hover state. For the main layout, I used CSS Grid for the desktop screens and a regular block format for mobile.  In order to check the email address in the early access form, I used the CSS visibility: hidden property and the email validation property on the form.  
 
 
