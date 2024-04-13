@@ -50,19 +50,30 @@ Users should be able to:
 ### What I learned
 
 #### Sematic HTML5
+I learned how to improve the semantic markup with this challenge.  I originally had a ```main``` container with each section inside it, but I removed it since the design didn't seem to require it. I used [Olokodana AbdulKabir's solution](https://github.com/Olokoburnfire/fylo-dark-theme-landing-page) as a guide to improve the structure of the landing page.  
 
+I originally used ```ul``` tags for each section of the footer, except the social media links.  I realized after reviewing Olokodana's solution that the About and Contact Us columns only required ```ul``` tags.  The first two columns were regular ```div``` containers.  
 
-This project was somewhat challenging since the screen size in the design screenshot for the mobile layout had a width closer to 768px and not the normal 375px as stated in the style guide. I used Font Awesome svgs for the social media icons and added the CSS fill style to them on the hover state. For the main layout, I used CSS Grid for the desktop screens and a regular block format for mobile.  In order to check the email address in the early access form, I used the CSS visibility: hidden property and the email validation property on the form.  
+#### CSS Flexbox
+I used Flexbox to style the navigation menu and the columns in the footer.  The Flexbox ```justify-content: space-between``` property easily creates space between elements in the navigation menu.  To create the column alignment in the footer, I used the ```flex-direction: column``` property that easily switches the container from a row to column layout.  
 
+#### CSS Grid  
+In order to switch between a single-column layout on mobile screens to a four-column layout on desktop screens in the features section, I used CSS Grid's ```grid-template-columns``` property.  It made it easy to setup any number of columns, and change the number column needed.  The ```repeat()``` specifies the number of columns to repeat, along with the size of each column. I also used ```grid-template-columns``` in the footer with the help of Olokodana's solution.  It was easy to setup columns for the footer using this property.
 
 ```css
-.social {
+.footer__container {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    gap: 3em;
-
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5em;
   }
 ```
+
+#### Svgs
+I used Font Awesome svgs for the social media icons and added the CSS fill style to them on the hover state. 
+
+#### JavaScript
+In order to check the email address in the early access form, I used the CSS visibility: hidden property and the email validation property on the form.  
+
 ```js
 btn.addEventListener('click', (event) => {
   event.preventDefault();

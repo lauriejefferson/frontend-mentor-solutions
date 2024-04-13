@@ -355,18 +355,21 @@
             </p>
           </div>
           <form novalidate>
-            <input
-              type="email"
-              name="email"
-              placeholder="email@example.com"
-              required
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-            />
-            <small class="error-message"
-              >Please enter a valid email address</small
-            >
-          <button class="early-access__submit">Get Started For Free</button>
+            <div class="data">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                />
+              <button class="early-access__submit">Get Started For Free</button>
+            </div>
+            <div class="error">
+              <small class="error-message">Please enter a valid email address</small>
+            </div>
           </form>
+          
         </div>
       </section>
     <footer class="footer">
