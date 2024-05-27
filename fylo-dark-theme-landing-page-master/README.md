@@ -96,3 +96,6 @@ I would like to learn more about form validation using CSS only and not relying 
 - Website - [Laurie Jefferson](https://github.com/lauriejeffersno)
 - Frontend Mentor - [@lauriejefferson](https://www.frontendmentor.io/profile/lauriejefferson)
 
+## Acknowledgements
+
+- Olokodana AbdulKabir's for his [solution](<https://github.com/Olokoburnfire/fylo-dark-theme-landing-page>)
