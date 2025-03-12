@@ -104,6 +104,7 @@ button {
   background-color: var(--dark-blue);
   color: var(--desaturated-blue);
   text-align: left;
+  cursor: pointer;
 }
 
 .profile {
@@ -161,19 +162,19 @@ button {
   letter-spacing: 1.3px;
 }
 
-.last-week {
+.previous {
   color: var(--pale-blue);
   font-size: 0.9rem;
 }
 
-.last-week-hours {
+.previous-hours {
   color: var(--pale-blue);
   font-size: 0.9rem;
 }
 
 .daily:hover,
 .weekly:hover,
-.montly:hover {
+.monthly:hover {
   color: white;
 }
 
@@ -234,7 +235,7 @@ button {
 .contents {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   width: 100%;
   background-color: var(--dark-blue);
   padding: 1.3em;

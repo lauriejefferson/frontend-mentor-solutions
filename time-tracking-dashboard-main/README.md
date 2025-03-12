@@ -81,6 +81,10 @@ const data = Object.values(result);
 console.log(data);
 ```
 
+### Update
+#### 3/25/25
+I fixed the hover stated on the Monthly button so that the text color changes on hover.  I also fixed the text for each activity. Now when you click on the activity links, Daily will read "Yesterday", Weekly will read "Last Week" and Monthly will read "Last Month".
+
 ### Continued development
 
 I will continue to focus on CSS Grid, particulary CSS Subgrid. CSS Subgrid is a great tool to align child containers within a main parent container.  I also want to use the grid-template-rows more when a container has a header and footer that matches the height of their areas, and a main section that uses up the remaining space. 
