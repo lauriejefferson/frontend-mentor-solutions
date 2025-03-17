@@ -78,6 +78,9 @@ const proudOfThisFunc = () => {
   console.log('🎉')
 }
 ```
+### Update 
+- 3/17/25
+I removed the padding in the navigation menu so that the the Sign In navigation link is inline on mobile screens. I added the logo svg using the img tag instead of adding it directly as it was taking up too much space.  I also added the the "See how Fylo works" logo svg using the img tag so that it displayed inline with the arrow logo. Finally, I added padding between the input and button on the early access form. 
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
