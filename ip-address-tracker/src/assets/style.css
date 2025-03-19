@@ -39,7 +39,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }
@@ -96,16 +95,16 @@ select {
 
 }
 
-
 body {
     font-family: var(--ff-body);
     font-size: var(--fs-body);
     color: var(--anti-flash-white);
+    min-height: 100svh;
 }
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     height: 100vh;
 }
 
@@ -137,5 +136,5 @@ body {
 }
 
 map {
-    height: 100vh
+    height: 100svh
 }

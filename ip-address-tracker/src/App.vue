@@ -22,7 +22,9 @@ const iconLocation = L.icon({
     iconAnchor: [22, 22]
 })
 function setupLeafletMap() {
-    mapDiv.value = L.map("mapContainer").setView(center, 13);
+    mapDiv.value = L.map("mapContainer", {
+        zoom: 13
+    }).setView(center, 13);
     L.tileLayer(
         'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
@@ -63,13 +65,11 @@ async function getGeolocation() {
     mapDiv.value.setView([lat.value, lon.value])
     mapDiv.value.setZoom(20)
 }
-
-
 </script>
 
 <template>
     <div class="container">
-        <header>
+        <div class="header">
             <h1 class="main-title">IP Address Tracker</h1>
             <form @submit.prevent="getGeolocation()">
                 <div class="form-control">
@@ -77,7 +77,7 @@ async function getGeolocation() {
                     <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
                 </div>
             </form>
-        </header>
+        </div>
         <div class="modal" v-show="showModal">
             <div class="modal__section ip-address">
                 <h3 class="title">Ip Address</h3>
@@ -101,7 +101,7 @@ async function getGeolocation() {
 </template>
 
 <style scoped>
-header {
+.header {
     background-image: url('./images/pattern-bg-mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,19 +157,14 @@ button:hover {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100vh;
-    max-width: 1440px;
+    height: 100svh;
 }
 
 .modal {
     position: absolute;
-    inset: 10em 5em;
+    /* inset: 10em 5em; */
     background-color: var(--anti-flash-white);
-    max-width: 1100px;
-    width: 100%;
-    margin: 4em 5em;
-    padding: 1em 2.5em 2.5em;
-    z-index: 1000;
+    z-index: 1;
     border: none;
     border-radius: 20px;
 }
@@ -180,26 +175,36 @@ button:hover {
 
 @media (min-width: 375px) {
     .modal {
+        position: absolute;
         display: grid;
-        grid-template-columns: 1fr;
-        inset: 10em 1em;
-        width: 70%;
+        grid-template-columns: 50%;
+        place-content: center;
+        inset: 10em 3em;
         height: 450px;
     }
 }
 
 @media (min-width: 1000px) {
     .modal {
+        position: absolute;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 100px;
+        grid-template-columns: repeat(4, minmax(2em, 1fr));
+        place-items: center;
         height: 160px;
-        inset: 10em 5em;
+        inset: 10.5em 7em;
+        width: 85%;
+        background-color: var(--anti-flash-white);
+
     }
 
     .modal .modal__section {
-        border-right: 1px solid var(--dark-gray);
-        padding-inline: 0.5em;
+        text-align: center;
+        width: 70%;
+        border-right: 2px solid var(--dark-gray);
+        padding-inline: 2em;
+
+
+        /* padding-inline: auto; */
     }
 
     .modal div:last-child {
