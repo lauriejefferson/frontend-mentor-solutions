@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import * as L from "leaflet";
 import locationIcon from './images/icon-location.svg'
 
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -10,29 +10,35 @@ const ipAddress = ref(null);
 const ip = ref(null)
 const location = ref(null);
 const timezone = ref(null);
-const isp = ref(null)
-const lat = ref(null)
-const lon = ref(null)
+const isp = ref(null);
+const lat = ref(null);
+const lon = ref(null);
 
-const center = [38.8937, -77.0971]
-const mapDiv = ref(null)
+const center = [38.8937, -77.0971];
+const initialMap = ref(null);
+const zoomControl = ref(null);
 const iconLocation = L.icon({
     iconUrl: locationIcon,
     iconSize: [50, 64],
     iconAnchor: [22, 22]
-})
+});
+
 function setupLeafletMap() {
-    mapDiv.value = L.map("mapContainer", {
-        zoom: 13
-    }).setView(center, 13);
+
+
+    initialMap.value = L.map("mapContainer", {
+        zoomControl: true, zoom: 1, zoomAnimation: false, fadeAnimation: true, markerZoomAnimation: true,
+    }).setView(center, 6);
     L.tileLayer(
         'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
+            maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            maxZoom: 19
 
         }
-    ).addTo(mapDiv.value);
+    ).addTo(initialMap.value);
+
+
 }
 
 async function getUserIp() {
@@ -40,7 +46,6 @@ async function getUserIp() {
     const data = await response.json()
     ipAddress.value = data.ip;
     await getGeolocation();
-
 }
 
 onMounted(() => {
@@ -61,9 +66,10 @@ async function getGeolocation() {
     lat.value = data.location.lat
     lon.value = data.location.lng
 
-    L.marker([lat.value, lon.value], { icon: iconLocation }).addTo(mapDiv.value)
-    mapDiv.value.setView([lat.value, lon.value])
-    mapDiv.value.setZoom(20)
+
+    L.marker([lat.value, lon.value], { icon: iconLocation }).addTo(initialMap.value)
+    initialMap.value.setView([lat.value, lon.value])
+    initialMap.value.setZoom(20)
 }
 </script>
 
@@ -156,13 +162,13 @@ button:hover {
 #mapContainer {
     position: absolute;
     z-index: -1;
+    max-width: 1440px;
     width: 100%;
     height: 100svh;
 }
 
 .modal {
     position: absolute;
-    /* inset: 10em 5em; */
     background-color: var(--anti-flash-white);
     z-index: 1;
     border: none;
@@ -190,33 +196,22 @@ button:hover {
         display: grid;
         grid-template-columns: repeat(4, minmax(2em, 1fr));
         place-items: center;
+        max-width: 1440px;
         height: 160px;
         inset: 10.5em 7em;
-        width: 85%;
         background-color: var(--anti-flash-white);
 
     }
 
     .modal .modal__section {
-        text-align: center;
-        width: 70%;
+        display: grid;
+        place-items: center;
         border-right: 2px solid var(--dark-gray);
         padding-inline: 2em;
-
-
-        /* padding-inline: auto; */
     }
 
     .modal div:last-child {
         border-right: none;
-    }
-
-    .title {
-        text-align: left;
-    }
-
-    .text {
-        text-align: left;
     }
 }
 </style>
